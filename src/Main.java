@@ -30,9 +30,7 @@ public class Main {
                 if(faktorijel){
                     System.out.println("Faktorijel broja je: " + rezultat);
                 }
-
             }
-
         }
     }
 }
