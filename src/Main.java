@@ -9,6 +9,9 @@ public class Main {
             boolean faktorijel = false;
             try{
                 Scanner unosBroja = new Scanner(System.in);
+                if(!unosBroja.hasNextInt()){
+                    throw new InputMismatchException("Niste unijeli cijeli pozitvni broj.");
+                }
                 int broj = unosBroja.nextInt();
                 for (int i = 0; i <= broj; i++) {
                    if (i == 0) {
@@ -19,7 +22,7 @@ public class Main {
                    faktorijel = true;
                 }
                 if (broj < 0){
-                    System.out.println("Unijeli ste negativan broj. Faktorijel nije definiran za negativne brojeve. Unesite cijeli pozitivan broj.");
+                   throw new InputMismatchException("Niste unijeli cijeli pozitvni broj.");
                 }
             } catch (InputMismatchException e){
                 System.out.println("Niste unijeli cijeli broj. Greska: " + e.getMessage());
